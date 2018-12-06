@@ -1,9 +1,53 @@
-    <h1>deliveryApp</h1>
-    <h3>Login goes here.</h3>
+<div class="container">
 
-    <p>It's still under construcion.</p>
+  <!-- BOOTSTRAP ROW -->
 
-    <p>(checkout the <a href="qr">QR Scanner</a>tho.)</p>
-   
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="../public/js/app.js"></script>
+  <div class="row">
+
+    <!-- MAIN COLUMN -->
+
+    <div class="col-8 offset-2">
+
+      <!-- LOGO -->
+
+      <br>
+      <h1 class="text-light text-center">deliverApp</h1>
+      <br>
+
+      <!-- INSTRUCTIONS -->
+
+      <h3 class="text-light text-center">Inicia Sesión</h3>
+      <br>
+
+      <form class="clearfix mb-4" action="POST">
+
+        <!-- EMAIL FIELD -->
+
+        <div class="form-group">
+          <input type="text" id="correo" class="form-control" aria-describedby="example-text" placeholder="Correo electrónico">
+        </div>
+
+        <!-- PASSWORD FIELD -->
+
+        <div class="form-group">
+          <input type="password" id="password" class="form-control" aria-describedby="example-text" placeholder="Contraseña">
+        </div>
+
+        <br>
+
+        <!-- SUBMIT BUTTON -->
+
+        <div class="text-center">
+          <button id="submit" class="btn btn-success">Enviar</button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
