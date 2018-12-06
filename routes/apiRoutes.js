@@ -1,24 +1,21 @@
 var db = require("../models");
 
-module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+module.exports = function (app) {
+  app.get("/api/orders", function (req, res) {
+    db.Order.findAll({}).then(function (dbOrders) {
+      res.json(dbOrders);
     });
   });
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+  app.post("/api/orders", function (req, res) {
+    db.Order.create(req.body).then(function (dbOrders) {
+      res.json(dbOrders);
     });
   });
 
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
+  app.get("/api/users", function (req, res) {
+    db.User.findAll({}).then(function (dbUsers) {
+      res.json(dbUsers);
     });
   });
 };
