@@ -1,29 +1,42 @@
-  <link rel="stylesheet" href="../widgets/signature/signature.css">
-  <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+<link rel="stylesheet" href="../widgets/signature/signature.css">
+<script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
 
-  <div id="signature-pad" class="signature-pad">
-    <div class="signature-pad--body">
-      <canvas></canvas>
-    </div>
-    <div class="signature-pad--footer">
-      <div class="description">Sign above</div>
+<div id="signature-pad" class="signature-pad">
+  <div class="signature-pad--body">
+    <canvas></canvas>
+  </div>
+  <div class="signature-pad--footer">
+    <div class="description">Sign above</div>
 
     <div class="signature-pad--actions">
-        <div>
-          <button type="button" class="button clear" data-action="clear">Clear</button>
-          <button type="button" class="button send" data-action="send">Send</button>
+      <div>
+        <button type="button" class="button clear" data-action="clear">Clear</button>
+        <button type="button" class="button send" id="send" data-action="send">Send</button>
 
-          {{!-- <button type="button" class="button" data-action="change-color">Change color</button>
-          <button type="button" class="button" data-action="undo">Undo</button> --}}
+        {{!-- <button type="button" class="button" data-action="change-color">Change color</button>
+        <button type="button" class="button" data-action="undo">Undo</button> --}}
 
-        </div>
-        {{!-- <div>
-          <button type="button" class="button save" data-action="save-png">Save as PNG</button>
-          <button type="button" class="button save" data-action="save-jpg">Save as JPG</button>
-          <button type="button" class="button save" data-action="save-svg">Save as SVG</button>
-        </div> --}}
       </div>
+      {{!-- <div>
+        <button type="button" class="button save" data-action="save-png">Save as PNG</button>
+        <button type="button" class="button save" data-action="save-jpg">Save as JPG</button>
+        <button type="button" class="button save" data-action="save-svg">Save as SVG</button>
+      </div> --}}
     </div>
   </div>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="../widgets/signature/signature.js"></script>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../widgets/signature/signature.js"></script>
+<script>
+  $("#send").click(function () {
+    var deliveringUserID = localStorage.getItem('deliveringUserID');
+    var receivingUserID = localStorage.getItem('receivingUserID');
+    var thesignature = 0;
+    var neworder = {
+      deliveringUserID: deliveringUserID,
+      receivingUserID: receivingUserID,
+      signature: thesignature
+    }
+    localStorage.clear();
+  });
+</script>

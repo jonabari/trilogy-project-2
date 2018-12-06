@@ -16,7 +16,7 @@ CREATE TABLE `users`
   `qr` TEXT
 ( 65535 ) NOT NULL,
   PRIMARY KEY
-( `user_id` ) 
+( `user_id` )
 );
 
 CREATE TABLE `orders`
@@ -34,5 +34,5 @@ CREATE TABLE `orders`
   `signature` TEXT
 ( 65535 ) NOT NULL,
   PRIMARY KEY
-( `order_id` ) 
+( `order_id` )
 );
