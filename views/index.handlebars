@@ -1,9 +1,16 @@
-    <h1>deliveryApp</h1>
-    <h3>Login goes here.</h3>
+<h1>Welcome to our DeliverApp</h1>
+<h3>Login goes here.</h3>
 
-    <p>It's still under construcion.</p>
+<p>It's still under construcion.</p>
 
-    <p>(checkout the <a href="qr">QR Scanner</a>tho.)</p>
-   
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="../public/js/app.js"></script>
+<p><a href="scan" id="login">Click Here</a></p>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../public/js/app.js"></script>
+<script>
+  $("#login").click(function () {
+    var userinfo = 1;
+    localStorage.clear();
+    localStorage.setItem('deliveringUserId', JSON.stringify(userinfo));
+  });
+</script>

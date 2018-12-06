@@ -18,4 +18,10 @@ module.exports = function (app) {
       res.json(dbUsers);
     });
   });
+
+  app.get("/api/user/:id", function (req, res) {
+    db.User.findById(req.params.id).then(function (dbUsers) {
+      res.json(dbUsers);
+    });
+  });
 };
