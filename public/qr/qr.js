@@ -1,5 +1,4 @@
-var localUser = localStorage.getItem("loggedUser");
-var parseLocalUser = JSON.parse(localUser);
-var userQr = parseLocalUser.qr;
+var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+var userQR = userInfo.qr;
 
-$("#qrElement").attr("src", userQr);
+$("#qrElement").attr("src", userQR);

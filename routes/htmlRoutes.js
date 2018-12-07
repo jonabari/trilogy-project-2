@@ -2,12 +2,22 @@ var db = require("../models");
 var path = require("path");
 
 module.exports = function(app) {
-  // Load index page
   app.get("/", function(req, res) {
     res.render("index");
   });
 
-  // Load qr page
+  app.get("/admin", function(req, res) {
+    res.render("admin");
+  });
+
+  app.get("/role", function(req, res) {
+    res.render("role");
+  });
+
+  app.get("/qr", function(req, res) {
+    res.render("qr");
+  });
+
   app.get("/scan", function(req, res) {
     res.render("scan");
   });
@@ -16,28 +26,10 @@ module.exports = function(app) {
     res.render("signature");
   });
 
-  // Sucess and thankyou page
   app.get("/success", function(req, res) {
     res.render("success");
   });
 
-  app.get("/qr", function(req, res) {
-    res.render("qr");
-  });
-
-  app.get("/role", function(req, res) {
-    res.render("role");
-  });
-
-  // // Load example page and pass in an example by id
-  // app.get("/example/:id", function(req, res) {
-  //   db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-  //     res.render("example", {
-  //       example: dbExample
-  //     });
-  //   });
-  // });
-  // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
   });
