@@ -11281,6 +11281,7 @@
                     outputData.parentElement.hidden = false;
                     outputData.innerText = code.data;
                     var scaninfo = parseInt(code.data, 10);
+
                     //console.log(scaninfo);
                     //console.log(code.data);
                     $.get("/api/user/id/" + scaninfo).then(function (data) {
@@ -11288,8 +11289,9 @@
                     localStorage.setItem("receivingUserId", JSON.stringify(data.id));
                     localStorage.setItem("receivingUserEmail", JSON.stringify(data.email));
                     });
-                    alert("Code Scanned");
-                    window.location.href = "/signature";
+                    alert("Code scanned");
+
+                  window.location.href = "/signature";
                 } else {
                     outputMessage.hidden = false;
                     outputData.parentElement.hidden = true;
