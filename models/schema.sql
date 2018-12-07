@@ -3,7 +3,7 @@ USE trustApp_db;
 
 CREATE TABLE `users`
 (
-  `user_id` Int
+  `id` Int
 ( 11 ) AUTO_INCREMENT NOT NULL,
   `email` VARCHAR
 ( 255) NOT NULL,
@@ -16,12 +16,12 @@ CREATE TABLE `users`
   `qr` TEXT
 ( 65535 ) NOT NULL,
   PRIMARY KEY
-( `user_id` )
+( `id` )
 );
 
-CREATE TABLE `orders`
+CREATE TABLE `Order`
 (
-  `order_id` Int
+  `id` Int
 ( 11 ) AUTO_INCREMENT NOT NULL,
   `delivering_user_id` VARCHAR
 ( 11 ) NOT NULL,
@@ -34,5 +34,5 @@ CREATE TABLE `orders`
   `signature` TEXT
 ( 65535 ) NOT NULL,
   PRIMARY KEY
-( `order_id` )
+( `id` )
 );

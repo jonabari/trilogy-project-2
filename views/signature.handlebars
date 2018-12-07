@@ -29,14 +29,23 @@
 <script src="../widgets/signature/signature.js"></script>
 <script>
   $("#send").click(function () {
-    var deliveringUserID = localStorage.getItem('deliveringUserID');
-    var receivingUserID = localStorage.getItem('receivingUserID');
+    var deliveringUserId = 1; //localStorage.getItem('deliveringUserID');
+    var receivingUserId = 2; //localStorage.getItem('receivingUserID');
+    var deliveringUserEmail = 'prueba1@prueba.com';
+    var receivingUserEmail = 'prueba2@prueba.com';
     var thesignature = 0;
-    var neworder = {
-      deliveringUserID: deliveringUserID,
-      receivingUserID: receivingUserID,
+    var newOrder = {
+      deliveringUserId: deliveringUserId,
+      deliveringUserEmail: deliveringUserEmail,
+      receivingUserId: receivingUserId,
+      receivingUserEmail: receivingUserEmail,
       signature: thesignature
     }
+    $.post("/api/orders", newOrder)
+      .then(function (data) {
+        console.log(data);
+        alert("Order Registered...");
+      });
     localStorage.clear();
   });
 </script>
