@@ -1,13 +1,47 @@
 <link rel="stylesheet" href="../public/scan/scan.css">
-<h1>deliveryApp</h1>
-<p>Scan the receiving party's QR code.</p>
-<div id="loadingMessage">🎥 Unable to access video stream (please make sure you have a camera enabled)</div>
-<canvas id="canvas" hidden></canvas>
-<div id="output" hidden>
-    <div id="outputMessage">No QR code detected.</div>
-    <div hidden>
-        <b>Data:</b>
-        <span id="outputData"></span>
+<!-- BOOTSTRAP ROW -->
+
+<div class="row">
+
+    <!-- MAIN COLUMN -->
+
+    <div class="col-8 offset-2">
+
+        <!-- LOGO -->
+
+        <br>
+        <h1 class="text-light text-center">deliverApp</h1>
+        <br>
+
+        <!-- INSTRUCTIONS -->
+
+        <h3 class="text-light text-center">Scan the receiving party's QR code</h3>
+
+        <br>
+        <div id="loadingMessage">🎥 Unable to access video stream (please make sure you have a camera enabled)</div>
+        <canvas id="canvas" hidden></canvas>
+        <div id="output" hidden>
+            <div id="outputMessage">No QR code detected.</div>
+            <div hidden>
+                <b>Data:</b>
+                <span id="outputData"></span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<br>
+
+<div class="row">
+    <div class="col-8 offset-2">
+
+
+        <div class="text-center">
+            <a class="button clear btn btn-danger font-weight-bold" href="/">Start Over</a>
+        </div>
+
     </div>
 </div>
 

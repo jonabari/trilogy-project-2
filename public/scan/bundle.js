@@ -11282,7 +11282,7 @@
                     outputData.innerText = code.data;
                     var scaninfo = parseInt(code.data, 10);
                     localStorage.setItem('receivingUserId', JSON.stringify(scaninfo));
-                    alert("Code Scanned");
+                    alert("Code scanned!");
                     window.location.href = "/signature";
                 } else {
                     outputMessage.hidden = false;

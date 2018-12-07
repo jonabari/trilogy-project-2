@@ -1,32 +1,60 @@
 <link rel="stylesheet" href="../public/signature/signature.css">
 <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
 
-<div id="signature-pad" class="signature-pad">
-  <div class="signature-pad--body">
-    <canvas></canvas>
+<div class="row">
+
+  <div class="col-8 offset-2">
+
+    <br>
+    <h1 class="text-light text-center">deliverApp</h1>
+    <br>
+    <h3 class="text-light text-center">Ask the recipient to draw his signature</h3>
+
   </div>
-  <div class="signature-pad--footer">
-    <div class="description">Sign above</div>
 
-    <div class="signature-pad--actions">
-      <div>
-        <button type="button" class="button clear" data-action="clear">Clear</button>
-        <button type="button" class="button send" id="send" data-action="send">Send</button>
+</div>
 
-        {{!-- <button type="button" class="button" data-action="change-color">Change color</button>
-        <button type="button" class="button" data-action="undo">Undo</button> --}}
+<div id="signature-container">
+
+  <div id="signature-pad" class="signature-pad">
+
+    <div class="signature-pad--body">
+
+      <canvas></canvas>
+
+    </div>
+
+    <div class="signature-pad--footer">
+
+      <div class="signature-pad--actions">
+
+        <div>
+
+          <button type="button" class="button clear btn btn-success font-weight-bold" data-action="clear">Clear</button>
+          <button type="button" class="button send btn btn-success font-weight-bold" id="send" data-action="send">Send</button>
+
+        </div>
 
       </div>
-      {{!-- <div>
-        <button type="button" class="button save" data-action="save-png">Save as PNG</button>
-        <button type="button" class="button save" data-action="save-jpg">Save as JPG</button>
-        <button type="button" class="button save" data-action="save-svg">Save as SVG</button>
-      </div> --}}
+
     </div>
+
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-8 offset-2">
+
+
+    <div class="text-center">
+      <a class="button clear btn btn-danger font-weight-bold" href="/">Start Over</a>
+    </div>
+
   </div>
 </div>
+
+<br>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="../public/signature/pad.js"></script>
-<script>
-
-</script>

@@ -95,7 +95,7 @@ savePNGButton.addEventListener("click", function (event) {
         alert("Error: " + data.error);
       } else {
         console.log(data.dbOrders);
-        alert("Order Registered...");
+        alert("Order registered!");
         window.location.href = "/success";
       }
     });
@@ -103,22 +103,3 @@ savePNGButton.addEventListener("click", function (event) {
     localStorage.clear();
   }
 });
-//download(dataURL, "signature.png");
-
-// saveJPGButton.addEventListener("click", function(event) {
-//   if (signaturePad.isEmpty()) {
-//     alert("Please provide a signature first.");
-//   } else {
-//     var dataURL = signaturePad.toDataURL("image/jpeg");
-//     download(dataURL, "signature.jpg");
-//   }
-// });
-
-// saveSVGButton.addEventListener("click", function(event) {
-//   if (signaturePad.isEmpty()) {
-//     alert("Please provide a signature first.");
-//   } else {
-//     var dataURL = signaturePad.toDataURL("image/svg+xml");
-//     download(dataURL, "signature.svg");
-//   }
-// });

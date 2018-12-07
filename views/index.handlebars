@@ -14,7 +14,7 @@
 
     <!-- INSTRUCTIONS -->
 
-    <h3 class="text-light text-center">Inicia Sesión</h3>
+    <h3 class="text-light text-center">Sign In</h3>
     <br>
 
     <form class="clearfix mb-4">
@@ -27,22 +27,18 @@
       <!-- PASSWORD FIELD -->
 
       <div class="form-group">
-        <input type="password" id="password" class="form-control" aria-describedby="example-text" placeholder="Passwords">
+        <input type="password" id="password" class="form-control" aria-describedby="example-text" placeholder="Password">
       </div>
-
-      <br>
 
     </form>
 
-      <!-- SUBMIT BUTTON -->
+    <!-- SUBMIT BUTTON -->
 
-      <div class="text-center">
-        <button id="login" class="btn btn-success">Send</button>
-      </div>
+    <div class="text-center">
+      <button id="login" class="btn btn-success font-weight-bold">Send</button>
+    </div>
 
   </div>
-
-</div>
 
 </div>
 
@@ -54,7 +50,7 @@
     localStorage.clear();
     var userinfo = 1;
     localStorage.setItem('deliveringUserId', JSON.stringify(userinfo));
-    alert("Welcome to DeliverApp");
+    alert("Welcome to deliverApp");
     window.location.href = "/role";
   });
 </script>

@@ -1,5 +1,5 @@
-CREATE DATABASE trustApp_db;
-USE trustApp_db;
+CREATE DATABASE deliverapp_db;
+USE deliverapp_db;
 
 CREATE TABLE `users`
 (
