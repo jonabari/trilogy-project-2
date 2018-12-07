@@ -8,7 +8,7 @@ module.exports = function (app) {
     });
   });
 
-  app.post("/api/orders", function (req, res) {
+  app.post("/api/orders", function(req, res) {
     console.log(req.body);
     db.Order.create(req.body).then(function (dbOrders) {
       var data = {
