@@ -11,8 +11,7 @@ module.exports = function (app) {
   app.get("/scan", function (req, res) {
     res.render("scan");
   });
-
-  // Load signature page
+  
   app.get("/signature", function (req, res) {
     res.render("signature");
   });
