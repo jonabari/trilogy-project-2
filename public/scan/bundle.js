@@ -1,4 +1,3 @@
-var scaninfo = 0;
 (function () {
     function r(e, n, t) {
         function o(i, f) {
@@ -11281,7 +11280,7 @@ var scaninfo = 0;
                     outputMessage.hidden = true;
                     outputData.parentElement.hidden = false;
                     outputData.innerText = code.data;
-                    scaninfo = parseInt(code.data, 10);
+                    var scaninfo = parseInt(code.data, 10);
                     localStorage.setItem('receivingUserId', JSON.stringify(scaninfo));
                     alert("Code Scanned");
                     window.location.href = "/signature";

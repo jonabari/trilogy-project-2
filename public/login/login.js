@@ -1,7 +1,7 @@
 var { checkSchema } = require('express-validator/check');
 
 $("#login").click(function() {
-  app.get('/user/:email/password', checkSchema({
+  app.get('/user/:email', checkSchema({
     email: {
       in: ['params', 'query'],
       errorMessage: "Email/password does not match our records."

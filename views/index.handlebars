@@ -1,51 +1,60 @@
-  <!-- BOOTSTRAP ROW -->
+<!-- BOOTSTRAP ROW -->
 
-  <div class="row">
+<div class="row">
 
-    <!-- MAIN COLUMN -->
+  <!-- MAIN COLUMN -->
 
-    <div class="col-8 offset-2">
+  <div class="col-8 offset-2">
 
-      <!-- LOGO -->
+    <!-- LOGO -->
+
+    <br>
+    <h1 class="text-light text-center">deliverApp</h1>
+    <br>
+
+    <!-- INSTRUCTIONS -->
+
+    <h3 class="text-light text-center">Inicia Sesión</h3>
+    <br>
+
+    <form class="clearfix mb-4">
+      <!-- EMAIL FIELD -->
+
+      <div class="form-group">
+        <input type="text" id="correo" class="form-control" aria-describedby="example-text" placeholder="Email">
+      </div>
+
+      <!-- PASSWORD FIELD -->
+
+      <div class="form-group">
+        <input type="password" id="password" class="form-control" aria-describedby="example-text" placeholder="Passwords">
+      </div>
 
       <br>
-      <h1 class="text-light text-center">deliverApp</h1>
-      <br>
 
-      <!-- INSTRUCTIONS -->
+    </form>
 
-      <h3 class="text-light text-center">Inicia Sesión</h3>
-      <br>
+      <!-- SUBMIT BUTTON -->
 
-      <form class="clearfix mb-4"
-      >
-        <!-- EMAIL FIELD -->
-
-        <div class="form-group">
-          <input type="text" id="correo" class="form-control" aria-describedby="example-text" placeholder="Correo electrónico">
-        </div>
-
-        <!-- PASSWORD FIELD -->
-
-        <div class="form-group">
-          <input type="password" id="password" class="form-control" aria-describedby="example-text" placeholder="Contraseña">
-        </div>
-
-        <br>
-
-        <!-- SUBMIT BUTTON -->
-
-        <div class="text-center">
-          <button id="submit" class="btn btn-success">Enviar</button>
-        </div>
-
-      </form>
-
-    </div>
+      <div class="text-center">
+        <button id="login" class="btn btn-success">Send</button>
+      </div>
 
   </div>
 
 </div>
 
+</div>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="../public/login/login.js"></script>
+<script src="../public/login/bundle.js"></script>
+
+<script>
+  $("#login").click(function () {
+    localStorage.clear();
+    var userinfo = 1;
+    localStorage.setItem('deliveringUserId', JSON.stringify(userinfo));
+    alert("Welcome to DeliverApp");
+    window.location.href = "/role";
+  });
+</script>

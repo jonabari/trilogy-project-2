@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
     deliveringUserEmail: DataTypes.STRING,
     receivingUserId: DataTypes.INTEGER,
     receivingUserEmail: DataTypes.STRING,
-    signature: DataTypes.TEXT
+    signature: DataTypes.TEXT("medium")
   });
   return Order;
   // eslint-disable-next-line prettier/prettier
