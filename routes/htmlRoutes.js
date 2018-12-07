@@ -11,10 +11,18 @@ module.exports = function (app) {
   app.get("/scan", function (req, res) {
     res.render("scan");
   });
-
-  // Load qr page
+  
   app.get("/signature", function (req, res) {
     res.render("signature");
+  });
+
+  // Sucess and thankyou page
+  app.get("/success", function (req, res) {
+    res.render("success");
+  });
+
+  app.get("/qr", function (req, res) {
+    res.render("qr");
   });
 
   app.get("/role", function (req, res) {

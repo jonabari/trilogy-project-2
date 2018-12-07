@@ -35,12 +35,12 @@
       <!-- SUBMIT BUTTON -->
 
       <div class="text-center">
-        <button id="login" class="btn btn-success">Enviar</button>
       </div>
 
-    </form>
-
+      <button id="login" class="btn btn-success">Enviar</button>
   </div>
+
+</div>
 
 </div>
 
@@ -49,8 +49,10 @@
 
 <script>
   $("#login").click(function () {
-    var userinfo = 1;
     localStorage.clear();
+    var userinfo = 1;
     localStorage.setItem('deliveringUserId', JSON.stringify(userinfo));
+    alert("Welcome to DeliverApp");
+    window.location.href = "/role";
   });
 </script>

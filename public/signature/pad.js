@@ -1,6 +1,6 @@
 var wrapper = document.getElementById("signature-pad");
 var clearButton = wrapper.querySelector("[data-action=clear]");
-// var savePNGButton = wrapper.querySelector("[data-action=save-png]");
+var savePNGButton = wrapper.querySelector("[data-action=send]");
 // var saveJPGButton = wrapper.querySelector("[data-action=save-jpg]");
 // var saveSVGButton = wrapper.querySelector("[data-action=save-svg]");
 var canvas = wrapper.querySelector("canvas");
@@ -61,18 +61,49 @@ resizeCanvas();
 //   return new Blob([uInt8Array], { type: contentType });
 // }
 
-clearButton.addEventListener("click", function(event) {
+clearButton.addEventListener("click", function (event) {
   signaturePad.clear();
 });
 
-// savePNGButton.addEventListener("click", function(event) {
-//   if (signaturePad.isEmpty()) {
-//     alert("Please provide a signature first.");
-//   } else {
-//     var dataURL = signaturePad.toDataURL();
-//     download(dataURL, "signature.png");
-//   }
-// });
+savePNGButton.addEventListener("click", function (event) {
+  if (signaturePad.isEmpty()) {
+    alert("Please provide a signature first.");
+  } else {
+    var deliveringUserId = 0;
+    var receivingUserId = 0;
+    var localdeliveringUserId = localStorage.getItem("deliveringUserId");
+    if (localdeliveringUserId) {
+      deliveringUserId = parseInt(localdeliveringUserId, 10);
+    }
+    var localreceivingUserId = localStorage.getItem("receivingUserId");
+    if (localdeliveringUserId) {
+      receivingUserId = parseInt(localreceivingUserId, 10);
+    }
+    var deliveringUserEmail = "prueba1@prueba.com";
+    var receivingUserEmail = "prueba2@prueba.com";
+    var thesignature = signaturePad.toDataURL();
+    var newOrder = {
+      deliveringUserId: deliveringUserId,
+      deliveringUserEmail: deliveringUserEmail,
+      receivingUserId: receivingUserId,
+      receivingUserEmail: receivingUserEmail,
+      signature: thesignature
+    }
+    $.post("/api/orders", newOrder).then(function (data) {
+      if (data.error) {
+        console.log("Error ", data.error)
+        alert("Error: " + data.error);
+      } else {
+        console.log(data.dbOrders);
+        alert("Order Registered...");
+        window.location.href = "/success";
+      }
+    });
+
+    localStorage.clear();
+  }
+});
+//download(dataURL, "signature.png");
 
 // saveJPGButton.addEventListener("click", function(event) {
 //   if (signaturePad.isEmpty()) {
