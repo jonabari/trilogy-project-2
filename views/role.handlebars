@@ -1,0 +1,46 @@
+<!-- BOOTSTRAP ROW -->
+
+<div class="row">
+
+    <!-- MAIN COLUMN -->
+
+    <div class="col-8 offset-2">
+
+        <!-- LOGO -->
+
+        <br>
+        <h1 class="text-light text-center">deliverApp</h1>
+        <br>
+
+        <!-- INSTRUCTIONS -->
+
+        <h3 class="text-light text-center">Bienvenido, {{ names }} {{lastnames}}</h3>
+
+        <h3 class="text-light text-center">¿Qué deseas hacer?</h3>
+
+        <br>
+        <!-- SUBMIT BUTTON -->
+
+        <div class="text-center">
+            <button id="deliver" class="btn btn-success">Voy a Entregar</button>
+            <br>
+            <br>
+            <button id="receive" class="btn btn-success">Voy a Recibir</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../public/login/bundle.js"></script>
+
+<script>
+    $("#deliver").click(function () {
+        window.location.href = "/scan";
+    });
+
+    $("#receive").click(function () {
+        window.location.href = "/qr";
+    });
+</script>

@@ -1,49 +1,48 @@
-  <!-- BOOTSTRAP ROW -->
+<!-- BOOTSTRAP ROW -->
 
-  <div class="row">
+<div class="row">
 
-    <!-- MAIN COLUMN -->
+  <!-- MAIN COLUMN -->
 
-    <div class="col-8 offset-2">
+  <div class="col-8 offset-2">
 
-      <!-- LOGO -->
+    <!-- LOGO -->
+
+    <br>
+    <h1 class="text-light text-center">deliverApp</h1>
+    <br>
+
+    <!-- INSTRUCTIONS -->
+
+    <h3 class="text-light text-center">Inicia Sesión</h3>
+    <br>
+
+    <form class="clearfix mb-4">
+      <!-- EMAIL FIELD -->
+
+      <div class="form-group">
+        <input type="text" id="correo" class="form-control" aria-describedby="example-text" placeholder="Correo electrónico">
+      </div>
+
+      <!-- PASSWORD FIELD -->
+
+      <div class="form-group">
+        <input type="password" id="password" class="form-control" aria-describedby="example-text" placeholder="Contraseña">
+      </div>
 
       <br>
-      <h1 class="text-light text-center">deliverApp</h1>
-      <br>
 
-      <!-- INSTRUCTIONS -->
+      <!-- SUBMIT BUTTON -->
 
-      <h3 class="text-light text-center">Inicia Sesión</h3>
-      <br>
+      <div class="text-center">
 
-      <form class="clearfix mb-4" action="POST"
-      >
-        <!-- EMAIL FIELD -->
+      </div>
 
-        <div class="form-group">
-          <input type="text" id="correo" class="form-control" aria-describedby="example-text" placeholder="Correo electrónico">
-        </div>
-
-        <!-- PASSWORD FIELD -->
-
-        <div class="form-group">
-          <input type="password" id="password" class="form-control" aria-describedby="example-text" placeholder="Contraseña">
-        </div>
-
-        <br>
-
-        <!-- SUBMIT BUTTON -->
-
-        <div class="text-center">
-          <button id="submit" class="btn btn-success">Enviar</button>
-        </div>
-
-      </form>
-
-    </div>
-
+    </form>
+    <button id="login" class="btn btn-success">Enviar</button>
   </div>
+
+</div>
 
 </div>
 
@@ -52,8 +51,11 @@
 
 <script>
   $("#login").click(function () {
-    var userinfo = 1;
     localStorage.clear();
+    var userinfo = 1;
     localStorage.setItem('deliveringUserId', JSON.stringify(userinfo));
+    alert("Welcome to DeliverApp");
+    window.location.href = "/role";
   });
-</script><div class="container">
+</script>
+<div class="container">
