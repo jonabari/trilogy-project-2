@@ -1,6 +1,5 @@
-module.exports = function(sequelize, DataTypes) {
-  var Order = sequelize.define("orders", {
-    orderid: DataTypes.INTEGER,
+module.exports = function (sequelize, DataTypes) {
+  var Order = sequelize.define("Order", {
     deliveringUserId: DataTypes.INTEGER,
     deliveringUserEmail: DataTypes.STRING,
     receivingUserId: DataTypes.INTEGER,
@@ -8,4 +7,5 @@ module.exports = function(sequelize, DataTypes) {
     signature: DataTypes.TEXT
   });
   return Order;
+  // eslint-disable-next-line prettier/prettier
 };
