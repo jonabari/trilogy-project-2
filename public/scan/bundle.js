@@ -11281,7 +11281,13 @@
                     outputData.parentElement.hidden = false;
                     outputData.innerText = code.data;
                     var scaninfo = parseInt(code.data, 10);
-                    localStorage.setItem('receivingUserId', JSON.stringify(scaninfo));
+                    //console.log(scaninfo);
+                    //console.log(code.data);
+                    $.get("/api/user/id/" + scaninfo).then(function (data) {
+                    console.log(data);
+                    localStorage.setItem("receivingUserId", JSON.stringify(data.id));
+                    localStorage.setItem("receivingUserEmail", JSON.stringify(data.email));
+                    });
                     alert("Code Scanned");
                     window.location.href = "/signature";
                 } else {

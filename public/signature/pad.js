@@ -88,7 +88,7 @@ savePNGButton.addEventListener("click", function (event) {
       receivingUserId: receivingUserId,
       receivingUserEmail: receivingUserEmail,
       signature: thesignature
-    }
+    };
     $.post("/api/orders", newOrder).then(function (data) {
       if (data.error) {
         console.log("Error ", data.error)
