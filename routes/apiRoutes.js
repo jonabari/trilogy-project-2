@@ -8,7 +8,7 @@ module.exports = function (app) {
     });
   });
 
-  app.post("/api/orders", function(req, res) {
+  app.post("/api/orders", function (req, res) {
     console.log(req.body);
     db.Order.create(req.body).then(function (dbOrders) {
       var data = {
@@ -32,12 +32,34 @@ module.exports = function (app) {
 
   app.post("/api/users/create", function (req, res) {
     db.User.create(req.body).then(function (dbUsers) {
+      var data = {
+        dbUsers: dbUsers
+      };
+      res.json(data);
+    }).catch(function (error) {
+      var errormessage = {
+        error: error.original.sqlMessage
+      };
+      res.json(errormessage);
+    });
+  });
+
+  app.get("/api/user/:email", function (req, res) {
+    db.User.findOne({
+      where: {
+        email: req.params.email
+      }
+    }).then(function (dbUsers) {
       res.json(dbUsers);
     });
   });
 
-  app.get("/api/user/:id", function (req, res) {
-    db.User.findById(req.params.id).then(function (dbUsers) {
+  app.get("/api/user/id/:id", function (req, res) {
+    db.User.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(function (dbUsers) {
       res.json(dbUsers);
     });
   });

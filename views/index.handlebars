@@ -9,7 +9,7 @@
     <!-- LOGO -->
 
     <br>
-    <h1 class="text-light text-center">deliverApp</h1>
+    <h1 class="text-light text-center">DeliverApp</h1>
     <br>
 
     <!-- INSTRUCTIONS -->
@@ -31,11 +31,12 @@
       </div>
 
     </form>
-
-    <!-- SUBMIT BUTTON -->
-
-    <div class="text-center">
-      <button id="login" class="btn btn-success font-weight-bold">Send</button>
+    
+    <!-- BUTTON FIELD -->
+    <div align="center">
+      <button id="login" class="btn btn-success font-weight-bold">Login</button>
+      <br><br>
+      <button id="create" class="btn btn-default">Create Test Users</button>
     </div>
 
   </div>
@@ -43,14 +44,4 @@
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="../public/login/bundle.js"></script>
-
-<script>
-  $("#login").click(function () {
-    localStorage.clear();
-    var userinfo = 1;
-    localStorage.setItem('deliveringUserId', JSON.stringify(userinfo));
-    alert("Welcome to deliverApp");
-    window.location.href = "/role";
-  });
-</script>
+<script src="../public/login/login.js"></script>
