@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "trustApp_db",
+    "database": "deliverApp_db",
     "port": 8889,
     "host": "localhost",
     "dialect": "mysql"
@@ -10,7 +10,7 @@
   "test": {
     "username": "root",
     "password": "root",
-    "database": "trustApp_db",
+    "database": "deliverApp_db",
     "port": 8889,
     "host": "localhost",
     "dialect": "mysql",

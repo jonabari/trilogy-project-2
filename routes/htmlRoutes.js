@@ -1,23 +1,31 @@
 var db = require("../models");
 var path = require("path");
 
-module.exports = function (app) {
+module.exports = function(app) {
   // Load index page
-  app.get("/", function (req, res) {
+  app.get("/", function(req, res) {
     res.render("index");
   });
 
   // Load qr page
-  app.get("/scan", function (req, res) {
+  app.get("/scan", function(req, res) {
     res.render("scan");
   });
 
-  // Load qr page
-  app.get("/signature", function (req, res) {
+  app.get("/signature", function(req, res) {
     res.render("signature");
   });
 
-  app.get("/role", function (req, res) {
+  // Sucess and thankyou page
+  app.get("/success", function(req, res) {
+    res.render("success");
+  });
+
+  app.get("/qr", function(req, res) {
+    res.render("qr");
+  });
+
+  app.get("/role", function(req, res) {
     res.render("role");
   });
 
@@ -30,7 +38,7 @@ module.exports = function (app) {
   //   });
   // });
   // Render 404 page for any unmatched routes
-  app.get("*", function (req, res) {
+  app.get("*", function(req, res) {
     res.render("404");
   });
 };

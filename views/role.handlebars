@@ -19,19 +19,15 @@
         <h3 class="text-light text-center">¿Qué deseas hacer?</h3>
 
         <br>
+        
+        <!-- SUBMIT BUTTON -->
 
-        <form class="clearfix mb-4">
-
-            <!-- SUBMIT BUTTON -->
-
-            <div class="text-center">
-                <button id="deliver" class="btn btn-success">Voy a Entregar</button>
-                <br>
-                <br>
-                <button id="receive" class="btn btn-success">Voy a Recibir</button>
-            </div>
-
-        </form>
+        <div class="text-center">
+            <button id="deliver" class="btn btn-success">Voy a Entregar</button>
+            <br>
+            <br>
+            <button id="receive" class="btn btn-success">Voy a Recibir</button>
+        </div>
 
     </div>
 
@@ -41,9 +37,11 @@
 <script src="../public/login/bundle.js"></script>
 
 <script>
-//    $("#login").click(function () {
-//        var userinfo = 1;
-//        localStorage.clear();
-//        localStorage.setItem('deliveringUserId', JSON.stringify(userinfo));
-//    });
+    $("#deliver").click(function () {
+        window.location.href = "/scan";
+    });
+
+    $("#receive").click(function () {
+        window.location.href = "/qr";
+    });
 </script>
