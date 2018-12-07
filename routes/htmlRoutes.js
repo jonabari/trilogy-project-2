@@ -1,4 +1,5 @@
 var db = require("../models");
+var path = require("path");
 
 module.exports = function(app) {
   // Load index page
@@ -7,12 +8,12 @@ module.exports = function(app) {
   });
 
   // Load qr page
-  app.get("/qr", function(req, res){
-    res.render("qr");
+  app.get("/scan", function(req, res) {
+    res.render("scan");
   });
 
   // Load qr page
-  app.get("/signature", function(req, res){
+  app.get("/signature", function(req, res) {
     res.render("signature");
   });
 
@@ -28,4 +29,4 @@ module.exports = function(app) {
   app.get("*", function(req, res) {
     res.render("404");
   });
-}
+};

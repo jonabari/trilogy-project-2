@@ -7,14 +7,20 @@ module.exports = function (app) {
     });
   });
 
-  app.post("/api/orders", function (req, res) {
+  app.post("/api/orders", function(req, res) {
     db.Order.create(req.body).then(function (dbOrders) {
       res.json(dbOrders);
     });
   });
 
-  app.get("/api/users", function (req, res) {
-    db.User.findAll({}).then(function (dbUsers) {
+  app.get("/api/users", function(req, res) {
+    db.User.findAll({}).then(function(dbUsers) {
+      res.json(dbUsers);
+    });
+  });
+
+  app.get("/api/user/:id", function(req, res) {
+    db.User.findById(req.params.id).then(function(dbUsers) {
       res.json(dbUsers);
     });
   });
