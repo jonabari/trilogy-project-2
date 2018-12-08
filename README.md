@@ -21,6 +21,16 @@ The app allows any user to self identify as a deliverer or a receiver for each i
 
 The team split up between front-end (Eduardo Monforte, Arly Castro) and back-end (Adrián Salinas, Jonathan Barceló). We tracked our collective efforts on github projects, with a shared digital whiteboard on mural.ly. 
 
+## Individual contriutions
+
+ - **Jonathan Barceló:** Built the logic with Adrián. Implement the browserify node bundler. In addition to back-end coding, led the team during standup meetings, maintained the digital whiteboard and made sure everyone was on the same page.
+ 
+ - **Adrián Salinas:** Found frameworks for the QR Code and signature features. Decided on the optimal way to store the data and then coded some of the complicated logic behind the app.
+ 
+ - **Eduardo Monforte:** Drew basic wireframes of the user flow and UI design based on back-end’s needs, submitted them for review and then coded the approved proposal.
+ 
+ - **Arly Castro:** Assisted with the coding of the handlebars.
+
 ## Improvements
 
 Going forward, we’d like to add the following features:
