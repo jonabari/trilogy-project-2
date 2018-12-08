@@ -11289,9 +11289,7 @@
                     localStorage.setItem("receivingUserId", JSON.stringify(data.id));
                     localStorage.setItem("receivingUserEmail", JSON.stringify(data.email));
                     });
-                    swal("You're here!").then(function(){
-                        window.location.href = "/signature";
-                    })
+                    window.location.href = "/signature";
                 } else {
                     outputMessage.hidden = false;
                     outputData.parentElement.hidden = true;
